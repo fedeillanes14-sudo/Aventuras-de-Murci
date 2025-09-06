@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Las Aventuras de Murci</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #74b9ff, #a29bfe);
+            min-height: 100vh;
+        }
+        .hero {
+            background: url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f9c060cd-76e2-46a5-943b-cbe120133c4d.png') no-repeat center center;
+            background-size: cover;
+            text-align: center;
+            padding: 4rem 2rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .adventure-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 600px;
+            margin: 0 auto;
+            background: #f3f4f6;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .adventure-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .adventure-card h4 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+        .adventure-card p {
+            font-size: 1.25rem;
+            color: #4a5568;
+            white-space: pre-line;
+            text-align: left;
+        }
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+        .media-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            background: white;
+        }
+        .media-item img,
+        .media-item video,
+        .media-item audio {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+        .media-item audio {
+            height: auto;
+            padding: 0.5rem;
+            background: #f3f4f6;
+        }
+        .media-item:hover {
+            opacity: 0.8;
+        }
+        .delete-btn {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            background: rgba(220, 38, 38, 0.7);
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 4px;
+            padding: 0 6px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            z-index: 10;
+        }
+        .delete-btn:hover {
+            background: rgba(220, 38, 38, 1);
+        }
+        .upload-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <header class="bg-blue-600 shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-white text-2xl font-bold">Las Aventuras de Murci</h1>
+            <nav>
+                <ul class="flex space-x-4 text-white">
+                    <li><a href="#inicio" class="hover:underline">Inicio</a></li>
+                    <li><a href="#historias" class="hover:underline">Historias</a></li>
+                    <li><a href="#galeria" class="hover:underline">Galería</a></li>
+                    <li><a href="#mapa" class="hover:underline">Mapa</a></li>
+                    <li><a href="#contacto" class="hover:underline">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <h2 class="text-4xl font-bold mb-4">Bienvenidos a las Aventuras de Murci</h2>
+        <p class="text-xl mb-6">Explora historias épicas, paisajes asombrosos y emocionantes viajes en Murcia. ¡Únete a las aventuras!</p>
+        <a href="#historias" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition">Descubre las Historias</a>
+    </section>
+
+    <section id="historias" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center mb-8 text-gray-800">Historias Épicas</h3>
+            <div class="adventure-card">
+                <h4>Gracias a mi evento canon hoy soy lo que soy</h4>
+                <p>
+Sueñas alto, es el poder
+Que te han dado desde el cielo
+No, no, no, no, no
+Que no sé a dónde voy, no es real
+Hace ya tiempo te volviste uno más
+Y odio cuando estoy lleno de este veneno
+Y oigo truenos si no estás
+¿Qué me has hecho? ¿Dónde estoy?
+Se me aparecen mil planetas de repente
+Esto es una alucinación
+Quiero ver tu otra mitad
+Alejarme de esta ciudad
+Y contagiarme de tu forma de pensar
+Miro al cielo al recordar
+Me doy cuenta otra vez más
+Que no hay momento que pase
+Sin dejarte de pensar
+Esta distancia no es normal
+Ya me he cansado de esperar
+Dos billetes para Marte
+No quiero ver nada más
+Imposible, es demasiado tarde (demasiado)
+Todo es un desastre (es un desastre)
+Esto es una obsesión
+No me sirven tus pocas señales (tus señales)
+Ya nada es como antes (como antes)
+Me olvido de quién soy
+¿Qué me has hecho? ¿Dónde estoy?
+No vas de frente, es lo de siempre
+Y de repente estoy perdiendo la razón
+Cien complejos sin sentido
+Me arrebatan tus latidos y tu voz
+Y ya no puedo más
+Que no sé a dónde voy, no es real
+Hace ya tiempo te volviste uno más
+Y odio cuando estoy lleno de este veneno
+Y oigo truenos si no estás
+Imposible, es demasiado tarde (demasiado)
+Todo es un desastre (es un desastre)
+Esto es una obsesión
+No me sirven tus pocas señales (tus señales)
+Ya nada es como antes (como antes)
+Me olvido de quién soy
+¿Y dónde estás?
+La verdad es que ya van mil noches malditas sin tu abrazo (oigo truenos)
+Es algo raro, estoy viciado a tu amor (oh, oh, oh)
+A tu amor (oh, oh, oh)
+A tu amor, amor, no, no, no, no, no
+Y ah-ah-ah, na-na
+Quiero verte, verte, verte, que se acabe ya.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center mb-8 text-gray-800">Galería de Aventuras</h3>
+            <div class="upload-section mb-8">
+                <h4 class="text-2xl font-bold mb-4">Sube tus fotos, videos y canciones</h4>
+                <input type="file" id="mediaUpload" accept="image/*,video/*,audio/*" multiple class="mb-4" />
+                <button id="uploadBtn" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Agregar a la Galería</button>
+                <p class="text-sm text-gray-600 mt-2">Selecciona archivos para agregarlos a la galería. Puedes eliminar cualquier archivo subido.</p>
+            </div>
+            <div class="galeria" id="galeriaContainer">
+                <!-- Existing images -->
+                <div class="media-item">
+                    <button class="delete-btn" title="Eliminar">×</button>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/de995f2c-06c3-460d-97ee-28a08467f453.png" alt="Panorama amplio de las aventuras de Murci" />
+                </div>
+                <div class="media-item">
+                    <button class="delete-btn" title="Eliminar">×</button>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4fd0eb89-8415-4996-a737-2765cc037196.png" alt="Murci saltando en cueva" />
+                </div>
+                <div class="media-item">
+                    <button class="delete-btn" title="Eliminar">×</button>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a86660db-92dc-4bb6-9558-bab443179e96.png" alt="Campamento nocturno de Murci" />
+                </div>
+                <div class="media-item">
+                    <button class="delete-btn" title="Eliminar">×</button>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/96dd24c2-d008-437b-9dfd-78989b0e4890.png" alt="Murci con fauna local" />
+                </div>
+                <div class="media-item">
+                    <button class="delete-btn" title="Eliminar">×</button>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6192876f-6a1d-4ad6-92ca-5864df2b5c85.png" alt="Amigos remando en lago" />
+                </div>
+                <div class="media-item">
+                    <button class="delete-btn" title="Eliminar">×</button>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1f29f11e-9715-4884-ae62-f06003ab7eb0.png" alt="Murci con trofeo en playa" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mapa" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center mb-8 text-gray-800">Mapa de La Rioja, Argentina</h3>
+            <div class="map-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Mapa_de_La_Rioja_(Argentina).png" alt="Mapa de La Rioja, Argentina" class="w-full rounded-lg shadow-md" />
+            </div>
+            <p class="text-center mt-4 text-gray-700">Explora el mapa de La Rioja, Argentina, para planificar tus propias aventuras inspiradas en las historias de Murci.</p>
+        </div>
+    </section>
+
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center mb-8 text-gray-800">Testimonios de Aventureros</h3>
+            <div class="flex flex-wrap justify-center">
+                <div class="testimonio bg-white p-4 rounded-lg m-2 max-w-md shadow">
+                    <p class="text-gray-700 italic">Gracias changos por llevarme al pool.</p>
+                </div>
+                <div class="testimonio bg-white p-4 rounded-lg m-2 max-w-md shadow">
+                    <p class="text-gray-700 italic">"Inspirado por estas historias, visité Murcia y viví una aventura similar. ¡Recomiendo leerlas!" - Viajero Europeo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto" class="bg-blue-600 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-xl font-bold mb-4">Contacto</h3>
+            <p class="mb-2">¿Quieres más historias o sugerencias? Envíanos un mensaje.</p>
+            <p class="mb-2">Email: aventurasdemurci@email.com</p>
+            <p>© 2023 Las Aventuras de Murci. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', e => {
+                e.preventDefault();
+                document.querySelector(anchor.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Animate adventure cards on scroll
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+        document.querySelectorAll('.adventure-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(card);
+        });
+
+        // Upload media and add to gallery with delete button
+        const mediaUpload = document.getElementById('mediaUpload');
+        const uploadBtn = document.getElementById('uploadBtn');
+        const galeriaContainer = document.getElementById('galeriaContainer');
+
+        function createMediaElement(file) {
+            const url = URL.createObjectURL(file);
+            const container = document.createElement('div');
+            container.className = 'media-item';
+
+            const deleteBtn = document.createElement('button');
+            deleteBtn.className = 'delete-btn';
+            deleteBtn.title = 'Eliminar';
+            deleteBtn.textContent = '×';
+            deleteBtn.addEventListener('click', () => {
+                URL.revokeObjectURL(url);
+                container.remove();
+            });
+            container.appendChild(deleteBtn);
+
+            if (file.type.startsWith('image/')) {
+                const img = document.createElement('img');
+                img.src = url;
+                img.alt = 'Foto subida por el usuario - Aventura en Murcia';
+                container.appendChild(img);
+            } else if (file.type.startsWith('video/')) {
+                const video = document.createElement('video');
+                video.src = url;
+                video.controls = true;
+                video.title = 'Video subido por el usuario - Aventura en Murcia';
+                container.appendChild(video);
+            } else if (file.type.startsWith('audio/')) {
+                const audio = document.createElement('audio');
+                audio.src = url;
+                audio.controls = true;
+                audio.title = 'Audio subido por el usuario - Canción de aventura';
+                container.appendChild(audio);
+            } else {
+                alert('Tipo de archivo no soportado: ' + file.type);
+                URL.revokeObjectURL(url);
+                return null;
+            }
+            return container;
+        }
+
+        uploadBtn.addEventListener('click', () => {
+            const files = mediaUpload.files;
+            if (!files.length) {
+                alert('Por favor, selecciona al menos un archivo.');
+                return;
+            }
+            for (const file of files) {
+                const mediaElement = createMediaElement(file);
+                if (mediaElement) {
+                    galeriaContainer.appendChild(mediaElement);
+                }
+            }
+            mediaUpload.value = '';
+        });
+
+        // Add delete functionality to existing images
+        document.querySelectorAll('.media-item .delete-btn').forEach(btn => {
+            btn.addEventListener('click', e => {
+                const container = e.target.parentElement;
+                container.remove();
+            });
+        });
+    </script>
+</body>
+</html>
+</content>
+</create_file>
